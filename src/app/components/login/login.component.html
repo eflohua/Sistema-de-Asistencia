@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-lg-4 col-md-8 mx-auto">
+                    <!-- form card login -->
+                    <div class="card rounded shadow shadow-sm">
+                        <div class="card-header justify-content-center text-center">
+                                <!-- <div class="avatar"> -->
+                                    <img src="../../../assets/img/user.png" alt="" width="100px">
+                                <!-- </div> -->
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Cargo...</option>
+                                <option value="1">Ugel</option>
+                                <option value="2">Director</option>
+                                <option value="3">Profesor</option>
+                                <option value="4">Auxiliar</option>
+                                </select>
+                            </div>
+                            <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control " name="uname1" id="uname1" required="" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <!-- rounded-0 form-control-lg-->
+                                    <input type="password" class="form-control  " id="inputPassword" required="" placeholder="Password">
+                                    <!-- <div class="invalid-feedback">Ingresa tu password tambien!</div> -->
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Recordar</label>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                        <!-- <div class="modal-footer">No tienes un cuenta? <a href="#">Crea uno</a></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
