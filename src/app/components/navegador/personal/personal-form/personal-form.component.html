@@ -1,47 +1,208 @@
-<div class="col-md-4 offset-md-4">
-    <form>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Nombres" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label  class="col-md-2 col-form-label">Apellido</label>
-          <div class="col-md-10">
-            <input type="text" class="form-control"  placeholder="Apelidos" required>
-          </div>
-        </div>
-        <div class="form-group row">
-            <label  class="col-sm-2 col-form-label">DNI</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputPassword3" placeholder="DNI" required>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label  class="col-sm-2 col-form-label">Cargo</label>
-            <div class="col-sm-10">
-              <select class="form-control"  required>
-                  <option selected>Selecione el cargo</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label  class="col-sm-2 col-form-label">Jornada</label>
-            <div class="col-sm-10">
-              <select type="email" class="form-control" id="inputPassword3" placeholder="Password" required>
-                  <option selected>Selecione el tipo de jornada</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="custom-file">
-                <div class="col-sm-12">
-                <label class="custom-file-label">Seleccione una fotografia</label>
-                <input type="file" class="custom-file-input" id="customFile">
-            </div>
+<style>
+  .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      text-align: center;
+  }
+  .kv-avatar {
+      display: inline-block;
+  }
+  .kv-avatar .file-input {
+      display: table-cell;
+      width: 213px;
+  }
+  .kv-reqd {
+      color: red;
+      font-family: monospace;
+      font-weight: normal;
+  }
+  </style>
+   
+
+  <form class="form form-vertical">
+      <div class="row">
+          <div class="col-sm-4 text-center">
+            <label>Vista Previa</label>
+              <div class="kv-avatar">
+                <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" alt="" height="150">
+                  <div class="file-loading">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                      <label class="custom-file-label text-left" for="customFileLang">Seleccionar foto</label>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br>
+                    <div class="text-left">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Ver Personal</button>
+                  </div>
+                  </div>
               </div>
           </div>
-            <button type="submit" class="btn btn-success btn-block">Enviar</button>
-      </form>
+          <div class="col-sm-8">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="email">Nombres<span class="kv-reqd">*</span></label>
+                          <input type="email" class="form-control" name="email" required>
+                        </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="pwd">DNI<span class="kv-reqd">*</span></label>
+                          <input type="password" class="form-control" name="pwd" required>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="fname">Apellido paterno</label>
+                          <input type="text" class="form-control" name="fname" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="lname">Apellido materno</label>
+                        <input type="text" class="form-control" name="lname" required>
+                    </div>
+                </div>
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="lname">Jornada Laboral</label>
+                          <select type="text" class="form-control" name="lname" required>
+                            <option selected>Seleccione la jornada</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="lname">Cargo</label>
+                        <select type="text" class="form-control" name="lname" required>
+                          <option selected>Seleccionar cargo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="lname">Tipo de Contrato</label>
+                      <select type="text" class="form-control" name="lname" required>
+                        <option selected>Seleccione el contrato</option>
+                      </select>
+                  </div>
+              </div>
+              </div>
+              <div class="form-group">
+                  <hr>
+                  <div class="text-right">
+                      <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </form>
+  <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
+  <p></p>
+  
+  
+
+  
+<div class="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Personal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table">
+          <table class="table table-hover table-condensed table-bordered" id="iddatatable">
+            <thead style=" font-weight: bold;">
+              <tr>
+                <td>DNI</td>
+                <td>Nombres</td>
+                <td>Apellido Paterno</td>
+                <td>Apellido Materno</td>
+                <td>Cargo</td>
+                <td>Jornada</td>
+                <td>Tipo de contrato</td>
+                <td>Editar</td>
+                <td>Deshabilitar</td>
+              </tr>
+            </thead>
+            <tfoot style=" font-weight: bold;">
+              <tr>
+                <td>DNI</td>
+                <td>Nombres</td>
+                <td>Apellido Paterno</td>
+                <td>Apellido Materno</td>
+                <td>Cargo</td>
+                <td>Jornada</td>
+                <td>Tipo de contrato</td>
+                <td>Editar</td>
+                <td>Deshabilitar</td>
+              </tr>
+            </tfoot>
+            <tbody >
+             
+                <tr >
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                  <td style="text-align: center;">
+                    <span class="btn btn-warning btn-sm" data-toggle="modal">
+                      <span class="fa fa-pencil-square-o"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: center;">
+                    <span class="btn btn-danger btn-sm" onclick="eliminarDatos('<?php echo $mostrar[0] ?>')">
+                      <span class="fa fa-trash"></span>
+                    </span>
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
+  </div>
+  
+</div>
+  
+   
+ 
+  <script>
+  var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' + 
+      'onclick="alert(\'Call your custom code here.\')">' +
+      '<i class="glyphicon glyphicon-tag"></i>' +
+      '</button>'; 
+  $("#avatar-1").fileinput({
+      overwriteInitial: true,
+      maxFileSize: 1500,
+      showClose: false,
+      showCaption: false,
+      browseLabel: '',
+      removeLabel: '',
+      browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
+      removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
+      removeTitle: 'Cancel or reset changes',
+      elErrorContainer: '#kv-avatar-errors-1',
+      msgErrorClass: 'alert alert-block alert-danger',
+      defaultPreviewContent: '<img src="src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"" alt="Your Avatar">',
+      layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
+      allowedFileExtensions: ["jpg", "png", "gif"]
+  });
+  </script>
