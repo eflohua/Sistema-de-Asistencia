@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SistemaAsistencia"
+    }
+  },
+  "defaultProject": "SistemaAsistencia",
+  "cli": {
+    "analytics": false
+  }
 }
