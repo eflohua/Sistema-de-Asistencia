@@ -5,7 +5,7 @@ class PruebaController{
      index (req:Request,res:Response){
      
        
-       pool.query('DESCRIIBE usuario');
+       pool.query('DESCRIBE usuario');
             res.json('usuario');
           }
           
