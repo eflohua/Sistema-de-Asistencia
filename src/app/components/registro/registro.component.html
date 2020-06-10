@@ -1,31 +1,133 @@
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-  
+<h3 class="text-center mb-5">ASISTENCIA</h3><!-- espacio de abajo--> 
+
+<!-- START Modal -->
+<main class="container">
+ <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
+   <div class="modal-dialog modal-md" role="document"><!--modal-lg ancho del modal--> 
+    <div class="modal-content">
+     <div class="modal-header">
+        <h5 id=tituloVentana>Registrar Tardanza</h5>
+        <button class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+       
+     </div>
+   <!--START MODAL BODY-->
+     <div class="modal-body">
+          <div class="alert alert-success">
+                <main class="container">
+                   <form>
+                       <div class="form-group">
+                              <input type="text" class="form-control" placeholder="DNI">
+                       </div>
+                       <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Nombres">
+                        </div>
+                          
+                           <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Apellidos">
+                            </div>
+                   
+                            <div class="form-group">
+                                  <input type="number" class="form-control" placeholder="Hora Tardanza">
+                            </div>
+           
+                          <div class="form-group">
+                        
+                             <input type="number" class="form-control" placeholder="Minuto de Tardanza">
+                      
+                          </div>
+                          <div class="form-group" >
+                            <input type="date" name="bday" max="3000-12-31" 
+                            min="1000-01-01" class="form-control">
+                        </div>
+
+                  </form>
+               </main>
+          </div>
+       </div>
+     <!--FINAL MODAL BODY-->
+     <div class="modal-footer">
+       <button class="btn btn-warning" type="button" data-dismiss="modal">
+         Cerrar
+       </button>
+       <button class="btn btn-success" type="button">
+         Guardar
+       </button>
+       </div>
+     </div>
+   </div>
+  </div>
+</main>
+<!--FINAL DEL MODAL-->
+<!--container--> <div class="container-md">
+             <!--boton de navegacion-->
+                   <form class="form-inline my-2 my-lg-0 float-right" >            
+                  
+                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                  </form><br><br>
+<!--container final--> </div>
+         <!-- tabla -->
+  <div class="container mt-5"><!-- container para estar en centro--><!-- mt-5 aparece una linea arriba con espacio-->
+
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped">
+<thead>
+<tr class="bg-dark text-white">
+     <th scope="col">IdPersonal</th>
+     <th scope="col">DNI</th>
+     <th scope="col">Nombre</th>
+     <th scope="col">Apellido Paterno</th>
+     <th scope="col">Apellido Materno</th>
+     <th scope="col">Fecha</th>
+     <th scope="col">Asistio</th>
+     <th scope="col">Tardanza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+     <th scope="row">1</th>
+     <td>76650545</td>
+     <td>Evangely</td>
+     <td>Lovolace</td>
+     <td>Flowers</td>
+     <td><div>
+          <input type="date" name="bday" max="3000-12-31" 
+          min="1000-01-01" class="form-control">
+         </div></td>
+     <td><div class="form-check form-check-inline">
+           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"></div></td>
+     <td>                  
+       <button class="btn btn-success" data-toggle="modal" data-target="#ventanaModal">
+         Tardanza
+     </button></td>
+
+</tr>
+<tr>
+     <th scope="row">2</th>
+     <td>76650546</td>
+     <td>Eli</td>
+     <td>Flores</td>
+     <td>Huamani</td>
+     <td><div>
+          <input type="date" name="bday" max="3000-12-31" 
+          min="1000-01-01" class="form-control">
+         </div></td>
+     <td><div class="form-check form-check-inline">
+           <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"></div>
+     </td>
+     <td>                  
+       <button class="btn btn-success" data-toggle="modal" data-target="#ventanaModal">
+         Tardanza
+     </button></td>
+
+</tr>
+
+
+
+</tbody>
+</table>
+<button class="btn btn-primary float-right" type="submit">Guardar</button><br>
+</div>
+</div>
