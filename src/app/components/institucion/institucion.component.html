@@ -1,10 +1,98 @@
 
+<!-- START Modal -->
+<main class="container">
+  <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document"><!--modal-lg ancho del modal--> 
+     <div class="modal-content">
+      <div class="modal-header">
+         <h2 id=tituloVentana>INSTITUCIÓN</h2>
+         <button class="close" data-dismiss="modal" aria-label="Cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+        
+      </div>
+      <!--START MODAL BODY-->
+      <div class="modal-body">
+           <div class="alert alert-success">
+                 <main class="container">
+                   <form>
+                      <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Código Modular">
+                      </div>
+                      <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Intitución">
+                      </div>
+                      <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Número">
+                      </div>
+                      <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Dirección">
+                      </div>
+                      <div class="form-group col-md-12">
+                        <select id="inputState" class="form-control">
+                          <option selected>Region...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <select id="inputState" class="form-control">
+                          <option selected>Provincia...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <select id="inputState" class="form-control">
+                          <option selected>Distrito...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-14">
+                        <select id="inputState" class="form-control">
+                          <option selected>Nivel...</option>
+                          <option>Primaria</option>
+                          <option>Secundaria</option>
+                          <option>Superior</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-14">
+                        <select id="inputState" class="form-control">
+                          <option selected>Modalidad...</option>
+                          <option>EBR</option>
+                          <option>CEBA</option>
+                          <option>CEPRO</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-14">
+                        <select id="inputState" class="form-control">
+                          <option selected>Turno...</option>
+                          <option>Mañana</option>
+                          <option>Tarde</option>
+                          <option>Noche</option>
+                        </select>
+                      </div>                      
+                   </form>
+                </main>
+           </div>
+        </div>
+        <!--FINAL MODAL BODY-->
+ 
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" type="button" data-dismiss="modal"> Cerrar </button>
+          <button class="btn btn-outline-success" type="button"> Guardar </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+ <!--FINAL DEL MODAL-->
+
   <div class="row">
     <div class="col">
       <input class="form-control" matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar Institucion">
     </div>
     <div class="col">
-      <button type="button" class="btn btn-success btn-block">Agregar</button>
+      <button type="button" class="btn btn-outline-success btn-block" 
+      data-toggle="modal" data-target="#ventanaModal">Agregar <i class="fas fa-plus"></i></button>
     </div>
     
   </div>
@@ -13,34 +101,55 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <!-- Codigo Modular Column -->
+    <ng-container matColumnDef="codModular">
+      <th mat-header-cell *matHeaderCellDef> Codigo Modular </th>
+      <td mat-cell *matCellDef="let element"> {{element.codModular}} </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
     </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <!-- Direccion  Column -->
+    <ng-container matColumnDef="direccion">
+      <th mat-header-cell *matHeaderCellDef> Direccion </th>
+      <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <!-- Numero Column -->
+    <ng-container matColumnDef="numero">
+      <th mat-header-cell *matHeaderCellDef> Numero </th>
+      <td mat-cell *matCellDef="let element"> {{element.numero}} </td>
     </ng-container>
 
-    <!-- Custom Column -->
-    <ng-container matColumnDef="custom">
-      <th mat-header-cell *matHeaderCellDef> Custom </th>
-      <td mat-cell *matCellDef="let element"> {{element.custom}} </td>
+    <!-- Nivel Column -->
+    <ng-container matColumnDef="nivel">
+      <th mat-header-cell *matHeaderCellDef> Nivel </th>
+      <td mat-cell *matCellDef="let element"> {{element.nivel}} </td>
+    </ng-container>
+
+    <!-- Modalidad Column -->
+    <ng-container matColumnDef="modalidad">
+      <th mat-header-cell *matHeaderCellDef> Modalidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.modalidad}} </td>
+    </ng-container>
+
+    <!-- Turno Column -->
+    <ng-container matColumnDef="turno">
+      <th mat-header-cell *matHeaderCellDef> Turno </th>
+      <td mat-cell *matCellDef="let element"> {{element.turno}} </td>
+    </ng-container>
+
+    <!-- action Column -->
+    <ng-container matColumnDef="ACTION">
+      <th mat-header-cell *matHeaderCellDef> EDITAR </th>
+      <td mat-cell *matCellDef="let element">
+        <button type="button" class="btn btn-outline-warning" 
+        data-toggle="modal" data-target="#ventanaModal"> <i class="fas fa-edit"></i></button> 
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -49,3 +158,5 @@
 
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
+
+
