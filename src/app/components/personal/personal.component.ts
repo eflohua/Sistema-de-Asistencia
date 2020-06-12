@@ -13,7 +13,7 @@ export interface PeriodicElement {
   Contrato: string;
   Cargo: string;
 }
-const ELEMENT_DATA: PeriodicElement[] = [{DNI: '112345', Nombres: 'Juan Espinoza Medrano', apepat: 'Av. Belen de Osma', apemat: '542012', Cargo: 'Secundaria', Contrato: 'EBR', Jornada: 'Mañana'}];
+const ELEMENT_DATA: PeriodicElement[] = [];
 
 @Component({
   selector: 'app-personal',
